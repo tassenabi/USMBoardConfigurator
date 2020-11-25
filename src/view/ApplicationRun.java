@@ -6,11 +6,9 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-
-import java.security.cert.X509Certificate;
+import view.masterView.SingleBoardElementView;
 
 public class ApplicationRun extends Application {
     public static void main(String[] args) {

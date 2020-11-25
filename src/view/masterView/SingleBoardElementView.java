@@ -1,4 +1,4 @@
-package view;
+package view.masterView;
 
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;

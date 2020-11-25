@@ -1,12 +1,12 @@
 package view;
 
-import javafx.scene.image.ImageView;
+import javafx.scene.control.ComboBox;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 import view.componentviews.ElementSizesView;
 import view.componentviews.ElementView;
+import view.componentviews.IsElementActiveView;
 import view.componentviews.ZubehoerView;
 
 public class SingleBoardElementView extends StackPane {
@@ -17,24 +17,23 @@ public class SingleBoardElementView extends StackPane {
     private ZubehoerView zubehoerViewTwo;
     private ZubehoerView zubehoerViewThree;
 
-    private HBox boxForButtonsImageViewsElementAccessories;
+    private HBox boxIsElementActive;
 
-    private GridPane gridForButtonAddDelete;
     private GridPane gridForSizesView;
     private GridPane gridForElementView;
     private GridPane gridForAccessoriesView;
-    private VBox VBoxForAccessoriesImageView;
     private GridPane gridForAll;
 
     private HBox boxForElementAnAccessoriesViews;
+
+    private IsElementActiveView IsElementActiveComboBox;
 
     public SingleBoardElementView() {
 
         //MasterGrid
         gridForAll = new GridPane();
 
-        //Buttons
-        gridForButtonAddDelete = new GridPane();
+        IsElementActiveComboBox = new IsElementActiveView();
 
         //Sizes
         gridForSizesView = new GridPane();
@@ -53,32 +52,27 @@ public class SingleBoardElementView extends StackPane {
         generateSizeView();
         generateElementView();
         generateAccessoriesViews();
-        generateImageViewAccessories();
+        createIsElementBox();
         createSubGrid();
-        //setShowGridLines();
+        setShowGridLines();
+    }
+
+    private void createIsElementBox() {
+
     }
 
     private void createSubGrid(){
-        boxForButtonsImageViewsElementAccessories = new HBox();
-        boxForButtonsImageViewsElementAccessories.getChildren().addAll(VBoxForAccessoriesImageView);
+        boxIsElementActive = new HBox();
+        boxIsElementActive.getChildren().addAll(IsElementActiveComboBox.getModel());
+
         boxForElementAnAccessoriesViews = new HBox();
         boxForElementAnAccessoriesViews.getChildren().addAll(gridForSizesView, gridForElementView);
 
-        gridForAll.add(boxForButtonsImageViewsElementAccessories,0,0);
+        gridForAll.add(boxIsElementActive,0,0);
         gridForAll.add(boxForElementAnAccessoriesViews, 0,1);
 
         getChildren().addAll(gridForAll);
 
-    }
-    
-    private void generateImageViewAccessories(){
-
-        VBoxForAccessoriesImageView = new VBox();
-        ImageView accessoryOne = zubehoerViewOne.getImageView();
-        ImageView accessoryTwo = zubehoerViewTwo.getImageView();
-        ImageView accessoryThree = zubehoerViewThree.getImageView();
-
-        VBoxForAccessoriesImageView.getChildren().addAll(accessoryOne, accessoryTwo, accessoryThree);
     }
 
     private void generateAccessoriesViews() {

@@ -1,6 +1,5 @@
 package view;
 
-import javafx.scene.control.ComboBox;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
@@ -24,7 +23,7 @@ public class SingleBoardElementView extends StackPane {
     private GridPane gridForAccessoriesView;
     private GridPane gridForAll;
 
-    private HBox boxForElementAnAccessoriesViews;
+    private HBox boxForZubehoerViews;
 
     private IsElementActiveView IsElementActiveComboBox;
 
@@ -54,7 +53,7 @@ public class SingleBoardElementView extends StackPane {
         generateAccessoriesViews();
         createIsElementBox();
         createSubGrid();
-        setShowGridLines();
+        //setShowGridLines();
     }
 
     private void createIsElementBox() {
@@ -65,11 +64,11 @@ public class SingleBoardElementView extends StackPane {
         boxIsElementActive = new HBox();
         boxIsElementActive.getChildren().addAll(IsElementActiveComboBox.getModel());
 
-        boxForElementAnAccessoriesViews = new HBox();
-        boxForElementAnAccessoriesViews.getChildren().addAll(gridForSizesView, gridForElementView);
+        boxForZubehoerViews = new HBox();
+        boxForZubehoerViews.getChildren().addAll(gridForSizesView, gridForElementView);
 
         gridForAll.add(boxIsElementActive,0,0);
-        gridForAll.add(boxForElementAnAccessoriesViews, 0,1);
+        gridForAll.add(boxForZubehoerViews, 0,1);
 
         getChildren().addAll(gridForAll);
 

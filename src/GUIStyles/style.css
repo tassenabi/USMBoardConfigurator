@@ -19,6 +19,9 @@
 
 }
 
+.IsElementActiveView {
+}
+
 .button {
    -fx-cell-size: inherit;
     -fx-background-color: transparent;

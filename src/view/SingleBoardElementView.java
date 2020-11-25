@@ -16,9 +16,7 @@ public class SingleBoardElementView extends StackPane {
     private ZubehoerView zubehoerViewOne;
     private ZubehoerView zubehoerViewTwo;
     private ZubehoerView zubehoerViewThree;
-    private ImageView elementImageView;
 
-    private VBox boxForElementImageViewAndButtons;
     private HBox boxForButtonsImageViewsElementAccessories;
 
     private GridPane gridForButtonAddDelete;
@@ -54,7 +52,6 @@ public class SingleBoardElementView extends StackPane {
 
         generateSizeView();
         generateElementView();
-        generateImageViewElement();
         generateAccessoriesViews();
         generateImageViewAccessories();
         createSubGrid();
@@ -62,10 +59,8 @@ public class SingleBoardElementView extends StackPane {
     }
 
     private void createSubGrid(){
-        boxForElementImageViewAndButtons = new VBox();
-        boxForElementImageViewAndButtons.getChildren().addAll(elementImageView, gridForButtonAddDelete);
         boxForButtonsImageViewsElementAccessories = new HBox();
-        boxForButtonsImageViewsElementAccessories.getChildren().addAll(VBoxForAccessoriesImageView, boxForElementImageViewAndButtons);
+        boxForButtonsImageViewsElementAccessories.getChildren().addAll(VBoxForAccessoriesImageView);
         boxForElementAnAccessoriesViews = new HBox();
         boxForElementAnAccessoriesViews.getChildren().addAll(gridForSizesView, gridForElementView);
 
@@ -75,13 +70,6 @@ public class SingleBoardElementView extends StackPane {
         getChildren().addAll(gridForAll);
 
     }
-
-    private void generateImageViewElement(){
-
-        elementImageView = elementView.getElementImageView();
-
-    }
-
     
     private void generateImageViewAccessories(){
 

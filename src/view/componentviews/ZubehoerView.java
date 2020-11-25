@@ -24,6 +24,7 @@ public class ZubehoerView {
 
         return this.accessoryOneImage;
     }
+
     public Label getLabelAccessory(){
         return this.labelAccessory;
     }

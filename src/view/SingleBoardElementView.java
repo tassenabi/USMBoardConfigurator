@@ -1,25 +1,21 @@
 package view;
 
-import javafx.beans.value.ObservableValue;
-import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
+import view.componentviews.ElementSizesView;
+import view.componentviews.ElementView;
+import view.componentviews.ZubehoerView;
 
 public class SingleBoardElementView extends StackPane {
 
-    private SizesView sizesView;
+    private ElementSizesView elementSizesView;
     private ElementView elementView;
-    private AccessoryView accessoryViewOne;
-    private AccessoryView accessoryViewTwo;
-    private AccessoryView accessoryViewThree;
-    private ButtonView buttonViewHorizontal;
-    private ButtonView buttonViewVertical;
+    private ZubehoerView zubehoerViewOne;
+    private ZubehoerView zubehoerViewTwo;
+    private ZubehoerView zubehoerViewThree;
     private ImageView elementImageView;
 
     private VBox boxForElementImageViewAndButtons;
@@ -41,12 +37,10 @@ public class SingleBoardElementView extends StackPane {
 
         //Buttons
         gridForButtonAddDelete = new GridPane();
-        buttonViewHorizontal = new ButtonView();
-        buttonViewVertical = new ButtonView();
 
         //Sizes
         gridForSizesView = new GridPane();
-        sizesView = new SizesView();
+        elementSizesView = new ElementSizesView();
 
         //Elements
         gridForElementView = new GridPane();
@@ -54,16 +48,15 @@ public class SingleBoardElementView extends StackPane {
 
         //Accessories
         gridForAccessoriesView = new GridPane();
-        accessoryViewOne = new AccessoryView();
-        accessoryViewTwo = new AccessoryView();
-        accessoryViewThree = new AccessoryView();
+        zubehoerViewOne = new ZubehoerView();
+        zubehoerViewTwo = new ZubehoerView();
+        zubehoerViewThree = new ZubehoerView();
 
         generateSizeView();
         generateElementView();
         generateImageViewElement();
         generateAccessoriesViews();
         generateImageViewAccessories();
-        generateAddDeleteButton();
         createSubGrid();
         //setShowGridLines();
     }
@@ -93,27 +86,19 @@ public class SingleBoardElementView extends StackPane {
     private void generateImageViewAccessories(){
 
         VBoxForAccessoriesImageView = new VBox();
-        ImageView accessoryOne = accessoryViewOne.getImageView();
-        ImageView accessoryTwo = accessoryViewTwo.getImageView();
-        ImageView accessoryThree = accessoryViewThree.getImageView();
+        ImageView accessoryOne = zubehoerViewOne.getImageView();
+        ImageView accessoryTwo = zubehoerViewTwo.getImageView();
+        ImageView accessoryThree = zubehoerViewThree.getImageView();
 
         VBoxForAccessoriesImageView.getChildren().addAll(accessoryOne, accessoryTwo, accessoryThree);
     }
 
-    private void generateAddDeleteButton() {
-
-        gridForButtonAddDelete.add(buttonViewHorizontal.getButtonAdd(), 0,0);
-        gridForButtonAddDelete.add(buttonViewHorizontal.getButtonDelete(), 1,0);
-        gridForButtonAddDelete.add(buttonViewVertical.getButtonAdd(), 0,1);
-        gridForButtonAddDelete.add(buttonViewVertical.getButtonDelete(), 1,1);
-    }
-
     private void generateAccessoriesViews() {
 
-        gridForAccessoriesView.add(accessoryViewOne.getLabelAccessory(), 0,0);
-        gridForAccessoriesView.add(accessoryViewOne.getModel(), 0,1);
-        gridForAccessoriesView.add(accessoryViewTwo.getModel(), 0,2);
-        gridForAccessoriesView.add(accessoryViewThree.getModel(), 0,3);
+        gridForAccessoriesView.add(zubehoerViewOne.getLabelAccessory(), 0,0);
+        gridForAccessoriesView.add(zubehoerViewOne.getModel(), 0,1);
+        gridForAccessoriesView.add(zubehoerViewTwo.getModel(), 0,2);
+        gridForAccessoriesView.add(zubehoerViewThree.getModel(), 0,3);
     }
 
     private void generateElementView() {
@@ -125,14 +110,14 @@ public class SingleBoardElementView extends StackPane {
 
     private void generateSizeView() {
 
-        gridForSizesView.add(sizesView.getHoehe(), 0,0);
-        gridForSizesView.add(sizesView.getModelHoehe(), 0,1);
+        gridForSizesView.add(elementSizesView.getHoehe(), 0,0);
+        gridForSizesView.add(elementSizesView.getModelHoehe(), 0,1);
 
-        gridForSizesView.add(sizesView.getLaenge(), 0,2);
-        gridForSizesView.add(sizesView.getModelLaenge(), 0,3);
+        gridForSizesView.add(elementSizesView.getLaenge(), 0,2);
+        gridForSizesView.add(elementSizesView.getModelLaenge(), 0,3);
 
-        gridForSizesView.add(sizesView.getTiefe(), 0,4);
-        gridForSizesView.add(sizesView.getModelTiefe(), 0,5);
+        gridForSizesView.add(elementSizesView.getTiefe(), 0,4);
+        gridForSizesView.add(elementSizesView.getModelTiefe(), 0,5);
     }
 
     //Show lines

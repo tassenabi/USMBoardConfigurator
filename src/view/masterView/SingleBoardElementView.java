@@ -1,12 +1,7 @@
 package view.masterView;
 
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
-import view.componentviews.ElementSizesView;
-import view.componentviews.ElementView;
-import view.componentviews.IsElementActiveView;
-import view.componentviews.ZubehoerView;
+import javafx.scene.layout.*;
+import view.componentviews.*;
 
 public class SingleBoardElementView extends StackPane {
 
@@ -25,14 +20,16 @@ public class SingleBoardElementView extends StackPane {
 
     private HBox boxForZubehoerViews;
 
-    private IsElementActiveView IsElementActiveComboBox;
+    private IsElementActiveView ElementActiveComboBox;
+
+    private ColorView colorView;
 
     public SingleBoardElementView() {
 
         //MasterGrid
         gridForAll = new GridPane();
 
-        IsElementActiveComboBox = new IsElementActiveView();
+        ElementActiveComboBox = new IsElementActiveView();
 
         //Sizes
         gridForSizesView = new GridPane();
@@ -48,12 +45,16 @@ public class SingleBoardElementView extends StackPane {
         zubehoerViewTwo = new ZubehoerView();
         zubehoerViewThree = new ZubehoerView();
 
+        colorView = new ColorView();
+
         generateSizeView();
         generateElementView();
         generateAccessoriesViews();
         createIsElementBox();
         createSubGrid();
         //setShowGridLines();
+
+       // this.setBackground(new Background(new BackgroundFill(Color.DARKGRAY, new CornerRadii(5), Insets.EMPTY)));
     }
 
     private void createIsElementBox() {
@@ -62,7 +63,8 @@ public class SingleBoardElementView extends StackPane {
 
     private void createSubGrid(){
         boxIsElementActive = new HBox();
-        boxIsElementActive.getChildren().addAll(IsElementActiveComboBox.getModel());
+        boxIsElementActive.getChildren().addAll();
+        boxIsElementActive.getChildren().addAll(ElementActiveComboBox.getModel(), colorView.getModel());
 
         boxForZubehoerViews = new HBox();
         boxForZubehoerViews.getChildren().addAll(gridForSizesView, gridForElementView);

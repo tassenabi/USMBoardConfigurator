@@ -34,7 +34,9 @@ public class ApplicationRun extends Application {
         //TODO Alligment setzen zwischen einzelnen Objekten
         //TODO herausfinden wo die Farbe blau gesetzt wird, damit IsElementActive grau oder so wird
         //TODO Button fehlt mit "auswerten"
-
+        //TODO Rahmen bei GridElement mit Farbe und combobox neben "isActive"
+        //TODO Validator ausbauen
+        //
         Button btn = new Button();
         btn.setText("calculate");
 
@@ -48,7 +50,7 @@ public class ApplicationRun extends Application {
         gp.add(oneSingleBoardElementView4,1,0);
 
         gp.add(btn,0,2);
-
+        gp.getStyleClass().add("custom-node");
 
         //hier in css auslagern?
         gp.setHgap(30); //horizontal gap in pixels => that's what you are asking for

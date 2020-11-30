@@ -15,10 +15,6 @@
     -fx-alignment: center;
 }
 
-.text-field {
-
-}
-
 .button {
    -fx-cell-size: inherit;
     -fx-background-color: transparent;

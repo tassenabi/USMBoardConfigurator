@@ -5,12 +5,15 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import view.masterView.SingleBoardElementView;
 
 public class ApplicationRun extends Application {
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -22,34 +25,34 @@ public class ApplicationRun extends Application {
         stage.setWidth(ApplicationSizeResolution.VIEW_WIDTH);
         stage.setHeight(ApplicationSizeResolution.VIEW_HEIGHT);
 
-        SingleBoardElementView oneSingleBoardElementView = new SingleBoardElementView();
-        SingleBoardElementView oneSingleBoardElementView2 = new SingleBoardElementView();
-        SingleBoardElementView oneSingleBoardElementView3 = new SingleBoardElementView();
-        SingleBoardElementView oneSingleBoardElementView4 = new SingleBoardElementView();
-
         StackPane root = new StackPane();
 
-        GridPane gp = new GridPane();
-
-        //TODO Alligment setzen zwischen einzelnen Objekten
-        //TODO herausfinden wo die Farbe blau gesetzt wird, damit IsElementActive grau oder so wird
-        //TODO Button fehlt mit "auswerten"
-        //TODO Rahmen bei GridElement mit Farbe und combobox neben "isActive"
         //TODO Validator ausbauen
-        //
+        //TODO Printer bauen -> toString Methoden überall einbauen
+
         Button btn = new Button();
         btn.setText("calculate");
 
+        GridPane gp = new GridPane();
+        ScrollPane sp = new ScrollPane(gp);
+        sp.setFitToWidth(true);
+        sp.setVvalue(3.0d);
+        gp.add(sp, 0, 10);
+        gp.setHgrow(sp, Priority.ALWAYS);
+        SingleBoardElementView[][] views = new SingleBoardElementView[10][10];
 
 
-        gp.add(oneSingleBoardElementView, 0,0);
-        gp.add(oneSingleBoardElementView2,0,1);
+        for (int zeile = 0; zeile< views.length; zeile++){
 
-        gp.add(oneSingleBoardElementView3,1,1);
+            for(int spalte = 0; spalte< views.length; spalte++){
 
-        gp.add(oneSingleBoardElementView4,1,0);
+                views[zeile][spalte] = new SingleBoardElementView();
+                gp.add(views[zeile][spalte],spalte,zeile);
 
-        gp.add(btn,0,2);
+            }
+        }
+
+        gp.add(btn,0,11);
         gp.getStyleClass().add("custom-node");
 
         //hier in css auslagern?
@@ -58,7 +61,7 @@ public class ApplicationRun extends Application {
         gp.setPadding(new Insets(10, 10, 10, 10)); //
 
 
-        root.getChildren().add(gp);
+        root.getChildren().addAll(gp, sp);
 
         Scene scene  = new Scene(root, 300, 250);
 
@@ -67,4 +70,5 @@ public class ApplicationRun extends Application {
         stage.setScene(scene);
         stage.show();
     }
+
 }

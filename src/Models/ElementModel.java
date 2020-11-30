@@ -9,6 +9,7 @@ public class ElementModel {
     public static ObservableList<String> getModel(){
 
         return FXCollections.observableArrayList(
+                "",
                 ElementMitRueckwand.name,
                 ElementOhneRueckwand.name,
                 ElementOhneSeitenPanel.name,

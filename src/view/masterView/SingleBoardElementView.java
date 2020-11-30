@@ -50,14 +50,7 @@ public class SingleBoardElementView extends StackPane {
         generateSizeView();
         generateElementView();
         generateAccessoriesViews();
-        createIsElementBox();
         createSubGrid();
-        //setShowGridLines();
-
-       // this.setBackground(new Background(new BackgroundFill(Color.DARKGRAY, new CornerRadii(5), Insets.EMPTY)));
-    }
-
-    private void createIsElementBox() {
 
     }
 

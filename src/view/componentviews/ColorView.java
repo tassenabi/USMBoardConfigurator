@@ -5,12 +5,16 @@ import javafx.scene.control.ComboBox;
 
 public class ColorView {
 
-    public ComboBox getModel() {
+    private ComboBox comboElement;
 
-        ComboBox comboElement = new ComboBox<>(ColorModel.getModel());
+    public ColorView(){
 
+        comboElement = new ComboBox<>(ColorModel.getModel());
         comboElement.setMaxWidth(120);
         comboElement.getSelectionModel().selectFirst();
+    }
+
+    public ComboBox getModel() {
 
         return comboElement;
     }

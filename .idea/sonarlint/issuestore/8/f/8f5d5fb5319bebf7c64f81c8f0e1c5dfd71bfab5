@@ -1,0 +1,8 @@
+
+u
+java:S1450"_Remove the "areElementsValid" field and declare it as a local variable in the relevant methods.(ÎÌ¡þ
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ª€¾
+M
+java:S1172"7Remove this unused method parameter "allBoardElements".(‘ª€¾
+M
+java:S1172""7Remove this unused method parameter "allBoardElements".(ãÀÇä

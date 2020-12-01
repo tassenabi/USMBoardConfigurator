@@ -6,7 +6,7 @@ import javafx.collections.ObservableList;
 public class IsElementActiveModel {
 
     private static final String aktiv = "ausgewählt";
-    private static final String deaktiviert = "";
+    private static final String deaktiviert = "arsch";
 
     public static ObservableList<String> getModel(){
 

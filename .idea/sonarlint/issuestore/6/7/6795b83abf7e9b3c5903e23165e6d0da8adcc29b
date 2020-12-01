@@ -1,0 +1,10 @@
+
+V	java:S110"<This class has 6 parents which is greater than 5 authorized.( “¿¯ÿÿÿÿÿ
+K
+java:S1144d"5Remove this unused private "setShowGridLines" method.(¹¹…
+
+java:S1450"bRemove the "boxForZubehoerViews" field and declare it as a local variable in the relevant methods.(¡µ¸ø8ˆ®Øá.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÂúÍÒøÿÿÿÿ
+{	java:S116"`Rename this field "ElementActiveComboBox" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê»38ÉùØá.
+ƒ
+java:S1450"aRemove the "boxIsElementActive" field and declare it as a local variable in the relevant methods.(êİ»’ıÿÿÿÿ8úù–×á.

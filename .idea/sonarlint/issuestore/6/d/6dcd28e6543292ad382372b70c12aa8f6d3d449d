@@ -1,0 +1,10 @@
+
+U
+java:S1118	":Add a private constructor to hide the implicit public one.(’÷„¥ùÿÿÿÿ
+
+java:S1488%"fImmediately return this expression instead of assigning it to the temporary variable "observableList".(üËÌ–ûÿÿÿÿ
+
+java:S1488"fImmediately return this expression instead of assigning it to the temporary variable "observableList".(üËÌ–ûÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ùæñÃûÿÿÿÿ
+
+java:S1488"fImmediately return this expression instead of assigning it to the temporary variable "observableList".(üËÌ–ûÿÿÿÿ

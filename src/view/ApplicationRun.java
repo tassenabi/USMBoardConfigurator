@@ -1,5 +1,6 @@
 package view;
 
+import calculator.Calculator;
 import config.ApplicationSizeResolution;
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -39,12 +40,14 @@ public class ApplicationRun extends Application {
         sp.setVvalue(3.0d);
         gp.add(sp, 0, 10);
         gp.setHgrow(sp, Priority.ALWAYS);
-        SingleBoardElementView[][] views = new SingleBoardElementView[10][10];
 
 
-        for (int zeile = 0; zeile< views.length; zeile++){
+        //Denk dran, Array-Groesse != Startbeginn ... lol, was ein Anfaengerfehler
+        SingleBoardElementView[][] views = new SingleBoardElementView[4][4];
 
-            for(int spalte = 0; spalte< views.length; spalte++){
+        for (int zeile =0; zeile< views.length; zeile++){
+
+            for(int spalte = 0; spalte< views[zeile].length; spalte++){
 
                 views[zeile][spalte] = new SingleBoardElementView();
                 gp.add(views[zeile][spalte],spalte,zeile);
@@ -69,6 +72,9 @@ public class ApplicationRun extends Application {
         scene.getStylesheets().add(ApplicationRun.class.getResource("/config/GUIStyles/style.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
+
+        Calculator cal = new Calculator();
+        btn.setOnAction(e-> cal.calculate(views));
     }
 
 }

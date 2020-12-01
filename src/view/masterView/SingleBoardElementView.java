@@ -24,6 +24,34 @@ public class SingleBoardElementView extends StackPane {
 
     private ColorView colorView;
 
+    public ElementSizesView getElementSizesView() {
+        return elementSizesView;
+    }
+
+    public ElementView getElementView() {
+        return elementView;
+    }
+
+    public ZubehoerView getZubehoerViewOne() {
+        return zubehoerViewOne;
+    }
+
+    public ZubehoerView getZubehoerViewTwo() {
+        return zubehoerViewTwo;
+    }
+
+    public ZubehoerView getZubehoerViewThree() {
+        return zubehoerViewThree;
+    }
+
+    public IsElementActiveView getElementActiveComboBox() {
+        return ElementActiveComboBox;
+    }
+
+    public ColorView getColorView() {
+        return colorView;
+    }
+
     public SingleBoardElementView() {
 
         //MasterGrid
@@ -101,6 +129,5 @@ public class SingleBoardElementView extends StackPane {
 
         gridForAll.setGridLinesVisible(true);
     }
-
 
 }

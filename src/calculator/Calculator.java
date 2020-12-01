@@ -20,12 +20,26 @@ public class Calculator {
 
             for(int spalte = 0; spalte< allElementsViews[zeile].length; spalte++){
 
-                //System.out.println("ficken " + zeile + allElementsViews[zeile][spalte].getElementActiveComboBox().getModel().getSelectionModel().getSelectedItem().toString());
+                //ist ausgewaehlt
+                System.out.println("zeile: " + zeile + " spalte: " + spalte + " value " + allElementsViews[zeile][spalte]
+                        .getColorView()
+                        .getModel()
+                        .getSelectionModel()
+                        .getSelectedItem());
+
+
+
+
+
+
+
+
 
                 //Anzahl aktiv ausgewaehlter BoardElemente
                 if(!allElementsViews[zeile][spalte].getElementActiveComboBox().getModel().getValue().equals("")){
 
                     countBoardElements = countBoardElements++;
+
 
 
                 }

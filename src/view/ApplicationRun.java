@@ -11,6 +11,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import org.apache.commons.lang3.ArrayUtils;
 import view.masterView.SingleBoardElementView;
 
 public class ApplicationRun extends Application {
@@ -43,7 +44,8 @@ public class ApplicationRun extends Application {
 
 
         //Denk dran, Array-Groesse != Startbeginn ... lol, was ein Anfaengerfehler
-        SingleBoardElementView[][] views = new SingleBoardElementView[4][4];
+        //Ausserdem Array quasi auf dem Kopf initialisieren (aus View gesehen)
+        SingleBoardElementView[][] views = new SingleBoardElementView[3][3];
 
         for (int zeile =0; zeile< views.length; zeile++){
 
@@ -54,6 +56,8 @@ public class ApplicationRun extends Application {
 
             }
         }
+
+        ArrayUtils.reverse(views);
 
         gp.add(btn,0,11);
         gp.getStyleClass().add("custom-node");

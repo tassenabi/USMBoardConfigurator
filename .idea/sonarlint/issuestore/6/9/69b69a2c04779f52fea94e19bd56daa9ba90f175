@@ -1,0 +1,9 @@
+
+\
+java:S1068":Remove this unused "countKnaufeOderSchloss" private field.(Úãäôıÿÿÿÿ8¯ôª€â.
+£
+java:S1186
+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÄŸÒ­üÿÿÿÿ8ùş†â.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ğ°Í•üÿÿÿÿ8õ½¦ƒâ.
+\
+java:S2123)":Remove this increment or correct the code not to waste it.(Š™âïüÿÿÿÿ8ìã«ƒâ.

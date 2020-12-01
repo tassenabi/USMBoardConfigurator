@@ -16,6 +16,6 @@ public class IsElementActiveView {
     }
         public ComboBox getModel() {
 
-            return comboElement;
+            return this.comboElement;
         }
 }

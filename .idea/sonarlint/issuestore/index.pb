@@ -29,3 +29,14 @@ W
 'src/Models/SingleBoardElementModel.java,5/0/50a257d7b37493d368a72814b40fe564a51dc68d
 M
 src/Models/ZubehoerModel.java,4/4/4470ea37576a3b1cb9bc82665730ce4920263ebc
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+X
+(src/view/componentviews/ElementView.java,7/d/7d4a14a93c8cba84361c1d474d494df80b5d6d4a
+]
+-src/view/componentviews/ElementSizesView.java,7/6/76fd08f6055b2d01a22619c7d7ed7b0df65850bf
+Y
+)src/view/componentviews/ZubehoerView.java,e/8/e83d7de2cd9dd95e56c71dcfd52bd056e72f4e82
+N
+src/calculator/Calculator.java,6/9/69b69a2c04779f52fea94e19bd56daa9ba90f175

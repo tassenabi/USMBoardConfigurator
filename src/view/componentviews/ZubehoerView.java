@@ -7,23 +7,24 @@ import javafx.scene.control.Label;
 public class ZubehoerView {
 
     private Label labelAccessory;
+    private ComboBox comboElement;
 
     public ZubehoerView(){
 
         labelAccessory = new Label("Zubehörteile");
+
+        comboElement = new ComboBox<>(ZubehoerModel.getModel());
+        comboElement.setMaxWidth(120);
+        comboElement.getSelectionModel().selectFirst();
     }
 
     public Label getLabelAccessory(){
+
         return this.labelAccessory;
     }
 
     public ComboBox getModel(){
 
-        ComboBox comboElement = new ComboBox<>(ZubehoerModel.getModel());
-
-        comboElement.setMaxWidth(120);
-        comboElement.getSelectionModel().selectFirst();
-
-        return comboElement;
+        return this.comboElement;
     }
 }

@@ -16,6 +16,6 @@ public class ColorView {
 
     public ComboBox getModel() {
 
-        return comboElement;
+        return this.comboElement;
     }
 }

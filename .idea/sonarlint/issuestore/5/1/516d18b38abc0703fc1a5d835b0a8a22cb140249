@@ -1,62 +1,62 @@
 
-J
-java:S1444"/Make this "public static lichtgrau" field final(×üìüÿÿÿÿ
-o
-java:S1104"YMake usmMattsilber a static final constant or non-public and provide accessors if needed.(òÑûº
-K
-java:S1444"0Make this "public static reinorange" field final(“ŒÖÓÿÿÿÿÿ
-J
-java:S1444
-"4Make this "public static graphitschwarz" field final(—“Œ¨
-I
-java:S1444".Make this "public static goldgelb" field final(›ŸŸúÿÿÿÿ
-q
-java:S1104"VMake enzianblau a static final constant or non-public and provide accessors if needed.(¦½ƒªûÿÿÿÿ
-D
-java:S1444".Make this "public static usmBraun" field final(›‡‹
 F
 java:S1444"0Make this "public static mittelgrau" field final(†ˆöõ
-p
-java:S1104"UMake stahlblau a static final constant or non-public and provide accessors if needed.(¼˜Àıÿÿÿÿ
-E
-java:S1444"/Make this "public static reinweiss" field final(ÜË¬Î
-I
-java:S1444	"3Make this "public static anthrazitgrau" field final(Ø°òÌ
-D
-java:S1444".Make this "public static usmGruen" field final(Ú·’
-I
-java:S1444"3Make this "public static usmMattsilber" field final(òÑûº
-j
-java:S1104"TMake usmBraun a static final constant or non-public and provide accessors if needed.(›‡‹
-j
-java:S1104"TMake usmGruen a static final constant or non-public and provide accessors if needed.(Ú·’
-o
-java:S1104	"YMake anthrazitgrau a static final constant or non-public and provide accessors if needed.(Ø°òÌ
-p
-java:S1104"UMake lichtgrau a static final constant or non-public and provide accessors if needed.(×üìüÿÿÿÿ
 q
 java:S1104"VMake reinorange a static final constant or non-public and provide accessors if needed.(“ŒÖÓÿÿÿÿÿ
+r
+java:S1104"WMake usmRobinrot a static final constant or non-public and provide accessors if needed.(ò©¾úÿÿÿÿ
+I
+java:S1444"3Make this "public static usmMattsilber" field final(òÑûº
+J
+java:S1444"/Make this "public static stahlblau" field final(¼˜Àıÿÿÿÿ
+K
+java:S1444"0Make this "public static enzianblau" field final(¦½ƒªûÿÿÿÿ
+J
+java:S1444"/Make this "public static lichtgrau" field final(×üìüÿÿÿÿ
+I
+java:S1444".Make this "public static goldgelb" field final(›ŸŸúÿÿÿÿ
+p
+java:S1104"UMake lichtgrau a static final constant or non-public and provide accessors if needed.(×üìüÿÿÿÿ
+p
+java:S1104"UMake stahlblau a static final constant or non-public and provide accessors if needed.(¼˜Àıÿÿÿÿ
+L
+java:S1444"1Make this "public static usmRobinrot" field final(ò©¾úÿÿÿÿ
+q
+java:S1104"VMake enzianblau a static final constant or non-public and provide accessors if needed.(¦½ƒªûÿÿÿÿ
+o
+java:S1104"YMake usmMattsilber a static final constant or non-public and provide accessors if needed.(òÑûº
+o
+java:S1104"TMake goldgelb a static final constant or non-public and provide accessors if needed.(›ŸŸúÿÿÿÿ
+D
+java:S1444".Make this "public static usmGruen" field final(Ú·’
+j
+java:S1104"TMake usmGruen a static final constant or non-public and provide accessors if needed.(Ú·’
+U
+java:S1118":Add a private constructor to hide the implicit public one.(Ş¥²üÿÿÿÿ
+E
+java:S1444"/Make this "public static reinweiss" field final(ÜË¬Î
+l
+java:S1104"VMake mittelgrau a static final constant or non-public and provide accessors if needed.(†ˆöõ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ìì×°
+I
+java:S1444	"3Make this "public static anthrazitgrau" field final(Ø°òÌ
 p
 java:S1104
 "ZMake graphitschwarz a static final constant or non-public and provide accessors if needed.(—“Œ¨
-L
-java:S1444"1Make this "public static usmRobinrot" field final(ò©¾úÿÿÿÿ
+K
+java:S1444"0Make this "public static reinorange" field final(“ŒÖÓÿÿÿÿÿ
+o
+java:S1104	"YMake anthrazitgrau a static final constant or non-public and provide accessors if needed.(Ø°òÌ
 D
-java:S1444".Make this "public static usmBeige" field final(™Ê¡
+java:S1444".Make this "public static usmBraun" field final(›‡‹
+j
+java:S1104"TMake usmBraun a static final constant or non-public and provide accessors if needed.(›‡‹
 j
 java:S1104"TMake usmBeige a static final constant or non-public and provide accessors if needed.(™Ê¡
+J
+java:S1444
+"4Make this "public static graphitschwarz" field final(—“Œ¨
 k
 java:S1104"UMake reinweiss a static final constant or non-public and provide accessors if needed.(ÜË¬Î
-o
-java:S1104"TMake goldgelb a static final constant or non-public and provide accessors if needed.(›ŸŸúÿÿÿÿ
-J
-java:S1444"/Make this "public static stahlblau" field final(¼˜Àıÿÿÿÿ
-U
-java:S1118":Add a private constructor to hide the implicit public one.(Ş¥²üÿÿÿÿ
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ìì×°
-l
-java:S1104"VMake mittelgrau a static final constant or non-public and provide accessors if needed.(†ˆöõ
-r
-java:S1104"WMake usmRobinrot a static final constant or non-public and provide accessors if needed.(ò©¾úÿÿÿÿ
-K
-java:S1444"0Make this "public static enzianblau" field final(¦½ƒªûÿÿÿÿ
+D
+java:S1444".Make this "public static usmBeige" field final(™Ê¡

@@ -1,6 +1,6 @@
 
+H
+java:S1068"-Remove this unused "yPosition" private field.(çÍÌûøÿÿÿÿ
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ùæñÃûÿÿÿÿ
 d
 java:S4275+"IRefactor this getter so that it actually refers to the field "yPosition".(ş°Ãõûÿÿÿÿ
-H
-java:S1068"-Remove this unused "yPosition" private field.(çÍÌûøÿÿÿÿ

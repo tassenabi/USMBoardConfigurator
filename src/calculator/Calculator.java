@@ -22,7 +22,7 @@ public class Calculator {
 
                 //ist ausgewaehlt
                 System.out.println("zeile: " + zeile + " spalte: " + spalte + " value " + allElementsViews[zeile][spalte]
-                        .getColorView()
+                        .getZubehoerViewTwo()
                         .getModel()
                         .getSelectionModel()
                         .getSelectedItem());

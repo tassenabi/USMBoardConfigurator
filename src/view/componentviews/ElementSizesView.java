@@ -4,13 +4,31 @@ import Models.ElementSizesModel;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 
+import java.util.concurrent.CompletableFuture;
+
 public class ElementSizesView {
 
     private Label labelHoehe;
     private Label labelLaenge;
     private Label labelTiefe;
 
+    private ComboBox comboHoehe;
+    private ComboBox comboLaenge;
+    private ComboBox comboTiefe;
+
     public ElementSizesView(){
+
+        comboHoehe = new ComboBox<>(ElementSizesModel.getModelHoehe());
+        comboHoehe.setMaxWidth(53);
+        comboHoehe.getSelectionModel().selectFirst();
+
+        comboLaenge = new ComboBox<>(ElementSizesModel.getModelLaenge());
+        comboLaenge.setMaxWidth(53);
+        comboLaenge.getSelectionModel().selectFirst();
+
+        comboTiefe = new ComboBox<>(ElementSizesModel.getModelTiefe());
+        comboTiefe.setMaxWidth(53);
+        comboTiefe.getSelectionModel().selectFirst();
 
         labelHoehe = new Label("Höhe");
         labelLaenge = new Label("Länge");
@@ -31,28 +49,16 @@ public class ElementSizesView {
 
     public ComboBox getModelHoehe(){
 
-        ComboBox comboHoehe = new ComboBox<>(ElementSizesModel.getModelHoehe());
-        comboHoehe.setMaxWidth(53);
-        comboHoehe.getSelectionModel().selectFirst();
-
-        return comboHoehe;
+        return this.comboHoehe;
     }
 
     public ComboBox getModelLaenge(){
 
-        ComboBox comboLaenge = new ComboBox<>(ElementSizesModel.getModelLaenge());
-        comboLaenge.setMaxWidth(53);
-        comboLaenge.getSelectionModel().selectFirst();
-
-        return comboLaenge;
+        return this.comboLaenge;
     }
 
     public ComboBox getModelTiefe(){
 
-        ComboBox comboTiefe = new ComboBox<>(ElementSizesModel.getModelTiefe());
-        comboTiefe.setMaxWidth(53);
-        comboTiefe.getSelectionModel().selectFirst();
-
-        return comboTiefe;
+        return this.comboTiefe;
     }
 }

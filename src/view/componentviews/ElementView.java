@@ -7,8 +7,13 @@ import javafx.scene.control.Label;
 public class ElementView {
 
     private Label labelElement;
+    private ComboBox comboElement;
 
     public ElementView() {
+
+        comboElement = new ComboBox<>(ElementModel.getModel());
+        comboElement.setMaxWidth(120);
+        comboElement.getSelectionModel().selectFirst();
 
         labelElement = new Label("Element");
     }
@@ -19,11 +24,6 @@ public class ElementView {
 
     public ComboBox getModel() {
 
-        ComboBox comboElement = new ComboBox<>(ElementModel.getModel());
-
-        comboElement.setMaxWidth(120);
-        comboElement.getSelectionModel().selectFirst();
-
-        return comboElement;
+        return this.comboElement;
     }
 }

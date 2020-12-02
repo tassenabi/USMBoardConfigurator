@@ -1,4 +1,4 @@
-package Models;
+package models;
 
 import Entities.zubehoer.*;
 import javafx.collections.FXCollections;

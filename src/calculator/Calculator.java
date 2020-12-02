@@ -1,5 +1,6 @@
 package calculator;
 
+import org.apache.commons.lang3.ArrayUtils;
 import view.masterView.SingleBoardElementView;
 
 public class Calculator {
@@ -7,7 +8,7 @@ public class Calculator {
     //Counts
     private int countAllBoardElements;
     private int countVertikaleBoardElements;
-    private int countHoizontaleBoardElements;
+    private int countHorizontaleBoardElements;
 
     private int countKnaufeOderSchloss;
 
@@ -17,6 +18,10 @@ public class Calculator {
 
     public void calculate(SingleBoardElementView[][] allElementsViews){
 
+        //Reverse Array, sodass 0/0 und 3/2 nicht mehr auf dem Kopf steht ... wie in der View eigentlich
+        ArrayUtils.reverse(allElementsViews);
+
+        //nach jedem Knopfdruck von calculate wird reseted
         this.resetNumbers();
 
         for (int zeile = 0; zeile< allElementsViews.length; zeile++){
@@ -25,21 +30,22 @@ public class Calculator {
 
                 countAllActiveElements(allElementsViews, zeile, spalte);
 
-                /**
-                 *  if(zeile == 0 && !allElementsViews[zeile][spalte].
-                 *                         getElementActiveComboBox()
-                 *                         .getModel()
-                 *                         .getSelectionModel()
-                 *                         .getSelectedItem().equals("")){
-                 *                     countVertikaleBoardElements = countHoizontaleBoardElements +1;
-                 *                     System.out.println("hor:" + countHoizontaleBoardElements);
-                 *                 }
-                 */
+
+                 if(zeile == 0 && !allElementsViews[zeile][spalte]
+                                          .getElementActiveComboBox()
+                                          .getModel()
+                                          .getSelectionModel()
+                                          .getSelectedItem().equals("")){
+
+                     countHorizontaleBoardElements = countHorizontaleBoardElements +1;
+
+                 }
+
 
             }
+
         }
-
-
+        System.out.println("hor:" + countHorizontaleBoardElements);
     }
 
     private void countAllActiveElements(SingleBoardElementView[][] allElementsViews, int zeile, int spalte) {
@@ -51,7 +57,7 @@ public class Calculator {
                 .getSelectedItem().equals("")){
 
             countAllBoardElements = countAllBoardElements+1;
-            System.out.println(zeile +" / " + spalte);
+
 
         }
     }
@@ -60,7 +66,7 @@ public class Calculator {
 
         this.countAllBoardElements = 0;
         this.countVertikaleBoardElements = 0;
-        this.countHoizontaleBoardElements = 0;
+        this.countHorizontaleBoardElements = 0;
     }
 
 }

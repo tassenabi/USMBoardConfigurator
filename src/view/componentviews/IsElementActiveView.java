@@ -1,6 +1,6 @@
 package view.componentviews;
 
-import Models.IsElementActiveModel;
+import models.IsElementActiveModel;
 import javafx.scene.control.ComboBox;
 
 public class IsElementActiveView {

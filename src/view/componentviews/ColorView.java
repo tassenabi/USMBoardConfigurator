@@ -1,6 +1,6 @@
 package view.componentviews;
 
-import Models.ColorModel;
+import models.ColorModel;
 import javafx.scene.control.ComboBox;
 
 public class ColorView {

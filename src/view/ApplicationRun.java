@@ -11,7 +11,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-import org.apache.commons.lang3.ArrayUtils;
 import view.masterView.SingleBoardElementView;
 
 public class ApplicationRun extends Application {
@@ -38,7 +37,9 @@ public class ApplicationRun extends Application {
         GridPane gp = new GridPane();
         ScrollPane sp = new ScrollPane(gp);
         sp.setFitToWidth(true);
-        sp.setVvalue(3.0d);
+
+        //TODO auf 3.0d wieder setzen
+        //sp.setVvalue(3.0d);
         gp.add(sp, 0, 10);
         gp.setHgrow(sp, Priority.ALWAYS);
 
@@ -57,9 +58,8 @@ public class ApplicationRun extends Application {
             }
         }
 
-        ArrayUtils.reverse(views);
-
-        gp.add(btn,0,11);
+        //TODO auf Rowindex 11 wieder setzen
+        gp.add(btn,0,4);
         gp.getStyleClass().add("custom-node");
 
         //hier in css auslagern?

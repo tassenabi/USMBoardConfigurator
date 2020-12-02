@@ -1,6 +1,6 @@
 package view.componentviews;
 
-import Models.ZubehoerModel;
+import models.ZubehoerModel;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 

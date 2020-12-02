@@ -1,10 +1,8 @@
 package view.componentviews;
 
-import Models.ElementSizesModel;
+import models.ElementSizesModel;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-
-import java.util.concurrent.CompletableFuture;
 
 public class ElementSizesView {
 

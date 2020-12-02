@@ -1,4 +1,4 @@
-package Models;
+package models;
 
 import Entities.sizes.Hoehe;
 import Entities.sizes.Laenge;

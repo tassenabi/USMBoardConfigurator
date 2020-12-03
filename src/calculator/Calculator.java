@@ -1,72 +1,119 @@
 package calculator;
 
+import Entities.elemente.ElementEinschubTuer;
+import Entities.elemente.ElementMitAusziehTuer;
+import Entities.elemente.ElementMitAusziehtuerMitEinlegeRahmen;
+import Entities.elemente.ElementMitKlappTuer;
 import org.apache.commons.lang3.ArrayUtils;
 import view.masterView.SingleBoardElementView;
 
 public class Calculator {
 
-    //Counts
-    private int countAllBoardElements;
-    private int countVertikaleBoardElements;
-    private int countHorizontaleBoardElements;
+    private SingleBoardElementView[][] allElementsViews;
+    private int horizontaleElemente;
+    private String txtRollenFuesse;
+    private String txtSchloesserGriffe;
 
-    private int countKnaufeOderSchloss;
-
-    public Calculator(){
-
-    }
-
-    public void calculate(SingleBoardElementView[][] allElementsViews){
+    public Calculator(SingleBoardElementView[][] allElementsViews){
 
         //Reverse Array, sodass 0/0 und 3/2 nicht mehr auf dem Kopf steht ... wie in der View eigentlich
         ArrayUtils.reverse(allElementsViews);
+        this.allElementsViews = allElementsViews;
+
+    }
+
+    public void calculate(){
 
         //nach jedem Knopfdruck von calculate wird reseted
-        this.resetNumbers();
+
+        //Zaehle horizontale Elemente
+        countHorizonteElemente();
+        txtSchloesserGriffe = countSchloesserGriffe();
+        txtRollenFuesse = getTxtRollenFuesse();
+        System.out.println(txtSchloesserGriffe);
+
+    }
+
+    private void countHorizonteElemente(){
+
+        horizontaleElemente = 0;
 
         for (int zeile = 0; zeile< allElementsViews.length; zeile++){
 
             for(int spalte = 0; spalte< allElementsViews[zeile].length; spalte++){
 
-                countAllActiveElements(allElementsViews, zeile, spalte);
+                if(zeile == 0 && !allElementsViews[zeile][spalte]
+                        .getElementActiveComboBox()
+                        .getModel()
+                        .getSelectionModel()
+                        .getSelectedItem().equals("")){
 
+                    horizontaleElemente = horizontaleElemente +1;
 
-                 if(zeile == 0 && !allElementsViews[zeile][spalte]
-                                          .getElementActiveComboBox()
-                                          .getModel()
-                                          .getSelectionModel()
-                                          .getSelectedItem().equals("")){
-
-                     countHorizontaleBoardElements = countHorizontaleBoardElements +1;
-
-                 }
-
+                }
 
             }
 
         }
-        System.out.println("hor:" + countHorizontaleBoardElements);
     }
 
-    private void countAllActiveElements(SingleBoardElementView[][] allElementsViews, int zeile, int spalte) {
-        //Anzahl aktiv ausgewaehlter BoardElemente
-        if(!allElementsViews[zeile][spalte].
-                getElementActiveComboBox()
-                .getModel()
-                .getSelectionModel()
-                .getSelectedItem().equals("")){
+    private String countSchloesserGriffe(){
 
-            countAllBoardElements = countAllBoardElements+1;
+        int countSchloesserGriffe = 0;
 
+        for (int zeile = 0; zeile< allElementsViews.length; zeile++){
 
+            for(int spalte = 0; spalte< allElementsViews[zeile].length; spalte++){
+
+                if(allElementsViews[zeile][spalte]
+                        .getElementView()
+                        .getModel()
+                        .getSelectionModel()
+                        .getSelectedItem().equals(ElementEinschubTuer.name) ||
+
+                        allElementsViews[zeile][spalte]
+                                .getElementView()
+                                .getModel()
+                                .getSelectionModel()
+                                .getSelectedItem().equals(ElementMitAusziehtuerMitEinlegeRahmen.name) ||
+
+                        allElementsViews[zeile][spalte]
+                                .getElementView()
+                                .getModel()
+                                .getSelectionModel()
+                                .getSelectedItem().equals(ElementMitKlappTuer.name) ||
+
+                        allElementsViews[zeile][spalte]
+                                .getElementView()
+                                .getModel()
+                                .getSelectionModel()
+                                .getSelectedItem().equals(ElementMitAusziehTuer.name)){
+
+                    countSchloesserGriffe = countSchloesserGriffe +1;
+                }
+            }
         }
+
+        return "Anzahl Schloesser oder Griffe ist: " + countSchloesserGriffe;
     }
 
-    private void resetNumbers() {
+    //(n*4)-((n-1)*2), wenn groesser n>0
+    private String getTxtRollenFuesse(){
 
-        this.countAllBoardElements = 0;
-        this.countVertikaleBoardElements = 0;
-        this.countHorizontaleBoardElements = 0;
+        int anzahlRollenFuesse;
+        int anzahlArretierung;
+
+        if(horizontaleElemente>0){
+            anzahlRollenFuesse = (horizontaleElemente*4) - ((horizontaleElemente-1)*2);
+            anzahlArretierung = anzahlRollenFuesse/2;
+        }
+
+        else{
+            anzahlRollenFuesse = 0;
+            anzahlArretierung = 0;
+        }
+
+        return "Anzahl Rollen/Fuesse: " + anzahlRollenFuesse
+                + " Anzahl Arretierungen: " + anzahlArretierung;
     }
-
 }

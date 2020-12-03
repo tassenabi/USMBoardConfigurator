@@ -40,3 +40,7 @@ Y
 )src/view/componentviews/ZubehoerView.java,e/8/e83d7de2cd9dd95e56c71dcfd52bd056e72f4e82
 N
 src/calculator/Calculator.java,6/9/69b69a2c04779f52fea94e19bd56daa9ba90f175
+W
+'src/models/SingleBoardElementModel.java,7/b/7b9ff63cb82ec9ca93a81bb497cdf171854ec31a
+Y
+)src/config/ApplicationSizeResolution.java,c/a/ca69ae48f0474b7f2b3426b8c1ec7e99432ca740

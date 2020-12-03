@@ -77,8 +77,8 @@ public class ApplicationRun extends Application {
         stage.setScene(scene);
         stage.show();
 
-        Calculator cal = new Calculator();
-        btn.setOnAction(e-> cal.calculate(views));
+        Calculator cal = new Calculator(views);
+        btn.setOnAction(e-> cal.calculate());
     }
 
 }
